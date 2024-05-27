@@ -1,0 +1,64 @@
+.organization-root {
+	height: 100%;
+	width: 100vw;
+	display: inline-flex;
+	align-items: flex-start;
+	padding-top: 5em;
+	padding-left: 0;
+}
+
+.card-root {
+	background-color: white;
+	border-radius: 1em;
+	padding-block: 2em;
+	padding-inline: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+	gap: 1em;
+}
+
+.card-without-color {
+	padding-inline: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+	gap: 1em;
+	margin-bottom: 2em;
+}
+
+.organization-content {
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	padding-inline: 1em;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	color: white;
+}
+
+.organization-content > *:not(:last-child) {
+	margin-bottom: 2em;
+}
+
+@media all and (min-width: 70em) {
+	.organization-root {
+		padding-left: 3em;
+	}
+
+	.organization-content {
+		padding-inline: 3em;
+	}
+}
+
+@media (min-width: 680px) {
+	.card-root {
+		display: block;
+	}
+}

@@ -1,0 +1,49 @@
+<div class="home-profile-menu">
+	<img
+		[src]="photoUrl"
+		alt="image-profile"
+		(click)="profile()"
+		(keyup)="profile()"
+		tabindex="0"
+	/>
+	<span>{{ displayName }}</span>
+	<div class="profile-menu-button">
+		<button (click)="toggleComponent()">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path d="M6 9l6 6 6-6" />
+			</svg>
+		</button>
+	</div>
+	<button class="movile">
+		<mat-icon class="icon" (click)="toggleComponent()"> home </mat-icon>
+	</button>
+</div>
+
+<div
+	class="box-profile-display"
+	[ngClass]="{ 'box-profile-display': profileMenu }"
+	*ngIf="!profileMenu"
+>
+	<div class="box-profile">
+		<div>
+			<mat-icon style="width: 50px; height: 50px">home</mat-icon>
+			<a (click)="goHome()" tabindex="0" (keyup)="keyUp($event)">Inicio</a>
+		</div>
+		<div>
+			<mat-icon style="width: 50px; height: 50px">logout</mat-icon>
+			<a (click)="signOut()" tabindex="0" (keyup)="handleKeyUp($event)">
+				Cerrar sesión
+			</a>
+		</div>
+	</div>
+</div>

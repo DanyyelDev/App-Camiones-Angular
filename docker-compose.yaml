@@ -1,0 +1,12 @@
+---
+services:
+  monolith-http:
+    image: ${REGISTRY_URL}/hgio/appinstruments-monolith-http
+    pull_policy: always
+    environment:
+      AWS_PROFILE: hgio
+      SPRING_PROFILES_ACTIVE: local
+    ports:
+      - "8080:8080"
+    volumes:
+      - $HOME/.aws:/home/hgio/.aws

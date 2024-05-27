@@ -1,0 +1,48 @@
+<app-google-button />
+
+<span class="login-divider">ó</span>
+
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="login-form-root">
+	<input
+		name="email"
+		type="email"
+		placeholder="Correo electronico"
+		class="hgio-input"
+		formControlName="email"
+	/>
+	<input
+		name="password"
+		type="password"
+		class="hgio-input"
+		placeholder="Contraseña"
+		formControlName="password"
+	/>
+	<input
+		name="password-confirmation"
+		type="password"
+		class="hgio-input"
+		placeholder="Reescriba su contraseña"
+		formControlName="passwordConfirmation"
+	/>
+
+	<div>
+		<input
+			type="checkbox"
+			id="termsAndConditions"
+			formControlName="termsAndConditions"
+		/>
+		<label for="termsAndConditions" class="label-terms"
+			>Acepto los
+			<u
+				class="terms-conditions"
+				(click)="openDialog()"
+				(keydown)="openDialog()"
+				tabindex="0"
+			>
+				términos y condiciones
+			</u>
+		</label>
+	</div>
+
+	<input type="submit" value="Crear cuenta" class="hgio-button" />
+</form>

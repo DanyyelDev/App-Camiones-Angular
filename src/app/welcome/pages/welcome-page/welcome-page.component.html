@@ -1,0 +1,86 @@
+<div class="welcome-page-container">
+	<div class="welcome-card">
+		<div class="background-phone">
+			<div class="container-image">
+				<img [src]="hgioLogo" alt="HGIO logo" class="welcome-logo" />
+			</div>
+
+			<div *ngIf="stateLogin">
+				<div class="title-container">
+					<span class="title-form">Iniciar sesión</span>
+				</div>
+
+				<app-login-form
+					*ngIf="!passwordForget; else password"
+					(eventConfirmationSignUp)="changeTab()"
+					(updateUsername)="updateUsername($event)"
+				/>
+
+				<div
+					class="container-dialog"
+					*ngIf="!passwordForget"
+					style="display: none"
+				>
+					<button (click)="openDialog()" class="button-help">
+						¿Necesita ayuda?
+					</button>
+				</div>
+
+				<div class="container-button">
+					<button (click)="forgotPassword()" class="forgot-password-link">
+						{{ textButton }}
+					</button>
+				</div>
+
+				<ng-template #password>
+					<app-forgot-password
+						*ngIf="!toogleForgotPassword; else resetPassword"
+						(eventToogleForgotPass)="changeForgotForm($event)"
+						(eventUsername)="updateUsername($event)"
+					/>
+
+					<ng-template #resetPassword>
+						<app-reset-password
+							(eventCancelReset)="changeForgotForm($event)"
+							(eventResetForm)="forgotPassword()"
+							[username]="username"
+						/>
+					</ng-template>
+				</ng-template>
+
+				<div class="alter-tab">
+					<button (click)="setToggle()">Crear cuenta</button>
+				</div>
+			</div>
+
+			<div *ngIf="!stateLogin">
+				<div class="title-container">
+					<span class="title-form">Crear cuenta</span>
+				</div>
+
+				<app-sign-up-form
+					*ngIf="!toogleForm; else confirmation"
+					(eventToogleForm)="changeForm($event)"
+					(eventUsername)="updateUsername($event)"
+				/>
+
+				<ng-template #confirmation>
+					<app-sign-up-confirmation
+						(eventToogleForm)="changeForm($event)"
+						[username]="username"
+					/>
+				</ng-template>
+
+				<div class="alter-tab">
+					<button (click)="setToggle()">Iniciar sesion</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div
+		class="welcome-page-background"
+		style="background-image: url('{{ pathBackground }}');"
+	>
+	</div>
+</div>

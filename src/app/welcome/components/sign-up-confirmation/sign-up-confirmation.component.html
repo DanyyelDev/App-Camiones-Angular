@@ -1,0 +1,35 @@
+<form
+	[formGroup]="confirmationForm"
+	class="confirmation-code-form"
+	(ngSubmit)="onSubmit()"
+>
+	<h3 class="title">¡Te enviamos un correo!</h3>
+
+	<p class="text">
+		Por favor ingresa el código de seis dígitos que te llego al correo para
+		confirmar tu cuenta
+	</p>
+
+	<div class="label-imput"><label for="">Ingrese su código:</label></div>
+	<input
+		name="confirmation-code"
+		pattern="[0-9]{6}"
+		maxlength="6"
+		max="999999"
+		class="hgio-input"
+		placeholder=""
+		formControlName="code"
+	/>
+
+	<input type="submit" class="hgio-button" value="Confirmar cuenta" />
+
+	<hr class="separator" />
+
+	<button class="forgot-passwd-link" (click)="resendEmail()">
+		Reenviar código
+	</button>
+
+	<button class="forgot-passwd-link" (click)="cancelSignUp()">
+		Cancelar registro
+	</button>
+</form>

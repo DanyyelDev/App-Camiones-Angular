@@ -1,0 +1,31 @@
+<div class="container">
+	<h1>Registrar Vehiculo</h1>
+
+	<form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+		<label for="plateNumber">Placa del vehiculo:</label>
+		<input type="text" id="plateNumber" name="plateNumber" formControlName="plateNumber" required />
+
+		<label for="brand">Marca:</label>
+		<input type="text" id="brand" name="brand" formControlName="brand" required />
+
+		<label for="model">Modelo:</label>
+		<input type="text" id="model" name="model" formControlName="model" required />
+
+		<label for="cargoCapacity">Capacidad de carga:</label>
+		<input type="text" id="cargoCapacity" name="cargoCapacity" formControlName="cargoCapacity" required />
+
+		<label for="bodyType">Carrocería :</label>
+		<input type="text" id="bodyType" name="bodyType" formControlName="bodyType" required />
+
+		<label for="idOwner">Identificación del propietario:</label>
+		<input type="text" id="idOwner" name="idOwner" formControlName="idOwner" required />
+
+		<label for="driver">Identificación del Conductor:</label>
+		<input type="text" id="driver" name="driver" formControlName="driver" required />
+
+		<label for="location">Ubicación:</label>
+		<input type="text" id="modlocationel" name="location" formControlName="location" required />
+
+		<button type="submit">Registrar</button>
+	</form>
+</div>

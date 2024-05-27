@@ -1,0 +1,15 @@
+<div class="card-root">
+	<h2 class="card-title">Vehiculos Registrados</h2>
+
+	<mat-list>
+		<div *ngFor="let vehicle of vehicles">
+			<mat-list-item class="list-item">
+				<mat-icon matListItemIcon> chevron_right </mat-icon>
+				<span class="text-item-id" matListItemTitle style="margin-right: 1em; ">{{ vehicle.plateNumber }}</span>
+				<span class="text-item" matListItemTitle>{{ vehicle.model }}</span>
+			</mat-list-item>
+
+			<mat-divider />
+		</div>
+	</mat-list>
+</div>

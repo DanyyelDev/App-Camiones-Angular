@@ -1,0 +1,24 @@
+<div class="guest-home-layout-menu">
+	<nav class="home-menu-bar-root">
+		<div class="nav-logo">
+			<img [src]="hgioLogo" alt="" />
+		</div>
+		<span class="menu-bar-spacer"></span>
+
+		<div class="home-menu-bar-options">
+			<div>Exit</div>
+		</div>
+	</nav>
+
+	<div class="router-outlet-container">
+		<router-outlet />
+	</div>
+	<footer>
+		<p>
+			¿Tienes Dudas e Inquietudes? Estamos aquí para brindarte toda la
+			información que necesitas.
+			<a [routerLink]="'help'">¡Contáctanos ahora!</a>
+		</p>
+		<p></p>
+	</footer>
+</div>

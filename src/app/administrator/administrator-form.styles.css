@@ -1,0 +1,54 @@
+.form-root {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1em;
+	margin-top: 20px;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.container-buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.container-forms > *:not(:first-child) {
+	margin-top: 1em;
+}
+
+.container-category {
+	display: flex;
+	flex-direction: row;
+}
+
+.container-category > *:not(:first-child) {
+	margin-left: 1em;
+}
+
+.container-subcategory {
+	display: flex;
+	flex-direction: row;
+	margin-left: 2em;
+	margin-top: 1em;
+}
+
+.container-subcategory > *:not(:first-child) {
+	margin-left: 1em;
+}
+
+.input-field {
+	width: 250px;
+}
+
+.form {
+	overflow-y: auto;
+	height: 500px;
+	width: 100%;
+}

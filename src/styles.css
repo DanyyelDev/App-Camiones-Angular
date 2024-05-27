@@ -1,0 +1,205 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: light) {
+	html {
+		color-scheme: light;
+	}
+
+	body {
+		color: white;
+	}
+}
+
+:root {
+	--hgi-blue: hsl(226, 46%, 25%);
+	--hgi-green: #609899;
+	--hgi-gray: hsl(40, 1%, 52%);
+	--hgi-gray-rgb: 134, 133, 131;
+	--background-color: hsl(0, 0%, 93%);
+	--hgi-font: 'Montserrat', sans-serif;
+	--hgi-font-default: 'Montserrat';
+	--hgio-input-height: 3em;
+	--hgio-input-border-radius: 1.5em;
+
+	--field-height: 3em;
+	--field-border-radius: calc(var(--field-height) / 2);
+
+	--home-menu-bar-height: 80px;
+	--home-logo-height: 50px;
+	--home-user-menu-arrow-size: 32px;
+}
+
+.top-1em {
+	margin-top: 1em;
+}
+
+.hgio-input {
+	font-family: var(--hgi-font);
+	font-size: 1.1em;
+	padding-block: 0.5em;
+	border: 0.1em solid var(--hgi-green);
+	border-radius: var(--hgio-input-border-radius);
+	padding-left: 1em;
+	outline: none;
+	font-size: 1.1em;
+	padding-left: 1em;
+}
+
+.hgio-input-small {
+	font-family: var(--hgi-font);
+	font-size: 1em;
+	padding-block: 0.5em;
+	border-color: var(--hgi-green);
+	border-radius: var(--hgio-input-border-radius);
+	border-width: 2px;
+	padding-left: 0.8em;
+	outline: none;
+}
+
+.hgio-button {
+	font-family: var(--hgi-font);
+	font-size: 1.1em;
+	border-color: var(--hgi-green);
+	border-radius: var(--hgio-input-border-radius);
+	background-color: var(--hgi-green);
+	color: white;
+}
+
+.hgio-button-small {
+	font-family: var(--hgi-font);
+	font-size: 0.8em;
+	border-color: var(--hgi-blue);
+	border-radius: var(--hgio-input-border-radius);
+	background-color: var(--hgi-blue);
+	color: white;
+}
+
+.hgio-select {
+	font-family: var(--hgi-font);
+	font-size: 1em;
+	padding-block: 0.5em;
+	padding-left: 1em;
+	padding-right: 2em;
+	border: 1px solid var(--hgi-blue);
+	border-radius: var(--hgio-input-border-radius);
+	background: url("https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/down4-20.png") white no-repeat 98.5% !important;
+	background-position: calc(100% - 0.75rem) center !important;
+	color: var(--hgi-blue);
+	outline: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.hgio-select option:not(:checked) {
+	color: var(--hgi-blue);
+	background-color: white;
+}
+
+.designed-form-container {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5%;
+	background-color: rgba(251, 241, 241, 0.884);
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: auto;
+	border-radius: 5px;
+	margin: 50px auto;
+	position: relative;
+	text-align: justify;
+}
+
+.designed-finish-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5%;
+	background-color: rgba(251, 241, 241, 0.884);
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: auto;
+	border-radius: 5px;
+	margin: 50px auto;
+	position: relative;
+}
+
+.title-form {
+	color: var(--hgi-blue);
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28.13px;
+	text-align: left;
+}
+
+.container-info {
+	font-family: Arial, sans-serif;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 15px;
+	text-align: center;
+}
+
+.container-info h2 {
+	color: #2c3e50;
+}
+
+.container-info h3 {
+	color: #2980b9;
+}
+
+.container-info a {
+	color: #3498db;
+	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	.container-info {
+		font-size: 0.8em;
+	}
+
+	.designed-finish-container {
+		padding: 10%;
+		margin: 20px auto;
+	}
+
+	.title-form {
+		font-size: 14pt;
+	}
+}
+
+.pf0 {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-size: 16px;
+	word-break: break-word;
+	margin: 0 0 1em;
+}
+
+.carousel>mat-tab-header {
+	z-index: -1;
+}

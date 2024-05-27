@@ -1,0 +1,32 @@
+<app-google-button />
+
+<form
+	[formGroup]="formLogin"
+	(submit)="onSubmit()"
+	*ngIf="!loading(); else loader"
+	class="login-form-root"
+>
+	<div class="label-imput"><label for="">Email:</label></div>
+	<input
+		name="username"
+		type="email"
+		placeholder=""
+		class="hgio-input"
+		formControlName="username"
+	/>
+
+	<div class="label-imput"><label for="">Contraseña:</label></div>
+	<input
+		name="password"
+		type="password"
+		class="hgio-input"
+		placeholder=""
+		formControlName="password"
+	/>
+
+	<input type="submit" value="Iniciar sesión" class="hgio-button" />
+</form>
+
+<ng-template #loader class="loading-container">
+	<app-loader></app-loader>
+</ng-template>

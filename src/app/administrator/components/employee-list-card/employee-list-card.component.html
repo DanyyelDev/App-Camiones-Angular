@@ -1,0 +1,58 @@
+<div style="width: 100%">
+	<div class="card-root">
+		<h2 class="card-title">
+			{{ title }}
+		</h2>
+
+		<mat-list>
+			<div *ngFor="let user of listEmployeesToShow()">
+				<mat-list-item>
+					<mat-icon matListItemIcon> account_circle </mat-icon>
+
+					<span class="text-primary" matListItemTitle>
+						{{ user.fullName }}
+					</span>
+
+					<p class="state" matListItemLine>
+						<span> {{ user.userType }}: {{ user.id }} </span>
+
+						<span *ngIf="showFillOut">
+							<mat-chip selected color="primary"> NO DILIGENCIADO </mat-chip>
+						</span>
+					</p>
+				</mat-list-item>
+
+				<mat-divider />
+			</div>
+		</mat-list>
+
+		<div class="paginator-control">
+			<span *ngIf="!isLastPage(); else lastPage" class="pagination-info">
+				Colaboradores {{ currentRecord() + 1 }} - {{ lastRecord() }} de
+				{{ lengthListEmployees() }}
+			</span>
+
+			<ng-template #lastPage>
+				<span class="pagination-info">
+					Colaboradores {{ currentRecord() + 1 }} -
+					{{ listEmployees().length }} de {{ lengthListEmployees() }}
+				</span>
+			</ng-template>
+
+			<div class="paginator-control-buttons">
+				<button class="hgio-button-small" (click)="back()">
+					{{ '< Anterior' }}
+				</button>
+
+				<button class="hgio-button-small" (click)="next()">
+					{{ 'Siguiente >' }}
+				</button>
+			</div>
+		</div>
+
+		<button class="export-button hgio-button">
+			<mat-icon> arrow_downward> </mat-icon>
+			Exportar lista a CSV
+		</button>
+	</div>
+</div>

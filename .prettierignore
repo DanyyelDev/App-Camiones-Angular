@@ -1,0 +1,9 @@
+/dist
+/coverage
+
+**/*.tf
+**/*.tfvars
+**/*.json
+**/*.md
+**/*.yaml
+**/*.cjs

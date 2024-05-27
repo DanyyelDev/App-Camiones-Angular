@@ -1,0 +1,61 @@
+.confirmation-code-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	color: var(--hgi-blue);
+
+	> h3 {
+		margin: 0;
+	}
+
+	> p {
+		color: var(--hgi-blue);
+		margin-top: 0;
+	}
+
+	> input {
+		height: var(--field-height);
+	}
+
+	> *:focus {
+		box-shadow: 0 0 0 1px;
+		outline: none;
+	}
+
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.separator {
+	width: 100%;
+	height: 2px;
+}
+
+.forgot-passwd-link {
+	font-family: var(--hgi-font);
+	background-color: transparent;
+	border: 0;
+	height: 2em;
+	align-items: center;
+
+	:focus {
+		box-shadow: none;
+	}
+}
+
+.title {
+	display: block;
+	font-size: 1.17em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+	font-family: var(--hgi-font);
+}
+
+.text {
+	font-family: var(--hgi-font);
+}

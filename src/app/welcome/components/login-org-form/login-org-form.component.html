@@ -1,0 +1,32 @@
+<form [formGroup]="formLoginOrg" (submit)="onSubmit()" class="login-form-root">
+	<select
+		id="documentType"
+		name="documentType"
+		formControlName="documentType"
+		class="hgio-input"
+		placeholder="Seleccione tipo de documento"
+		required
+	>
+		<option value="CC" selected>Cédula de ciudadanía</option>
+		<option value="CE">Cédula de extranjería</option>
+		<option value="PASSPORT">Pasaporte</option>
+	</select>
+
+	<input
+		name="documentNumber"
+		type="number"
+		placeholder="Número de documento"
+		class="hgio-input"
+		formControlName="documentNumber"
+	/>
+
+	<input
+		name="password"
+		type="password"
+		class="hgio-input"
+		placeholder="Contraseña"
+		formControlName="password"
+	/>
+
+	<input type="submit" value="Iniciar sesión" class="hgio-button" />
+</form>

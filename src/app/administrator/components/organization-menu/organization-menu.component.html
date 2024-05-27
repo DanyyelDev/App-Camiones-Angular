@@ -1,0 +1,16 @@
+<div class="organization-menu-root">
+	<div
+		class="organization-menu-item"
+		*ngFor="let item of itemsOrganization; let i = index"
+		[ngClass]="{ 'item-clicked': item.click }"
+		(click)="updateItemClicked(i)"
+		(keyup)="updateItemClicked(i)"
+		(keydown)="updateItemClicked(i)"
+		(keypress)="updateItemClicked(i)"
+		[routerLink]="item.url"
+		tabindex="0"
+	>
+		<mat-icon>{{ item.icon }}</mat-icon>
+		<span>{{ item.label }}</span>
+	</div>
+</div>

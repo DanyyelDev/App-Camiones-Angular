@@ -1,0 +1,11 @@
+<section class="organization-root">
+	<app-organization-menu />
+	<section class="organization-content">
+		<div [ngClass]="{
+				'card-root': addCardRoot(),
+				'card-without-color': !addCardRoot()
+			}">
+			<router-outlet (activate)="onActivate($event)" />
+		</div>
+	</section>
+</section>

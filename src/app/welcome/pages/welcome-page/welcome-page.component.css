@@ -1,0 +1,266 @@
+app-login-form,
+app-forgot-password,
+app-sign-up-form,
+app-sign-up-confirmation {
+	padding: 20px;
+}
+
+.welcome-page-container {
+	height: 100%;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.welcome-page-background {
+	height: 99.88vh;
+	width: 100vw;
+	background-size: cover;
+}
+
+.background-phone {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.title-container {
+	display: flex;
+	justify-content: center;
+	top: 310px;
+	left: 130px;
+	gap: 0px;
+	opacity: 0px;
+}
+
+.image-background {
+	display: flex;
+	flex-direction: end;
+	width: 66%;
+	height: 85%;
+	background-size: auto;
+	margin-top: 6%;
+	margin-left: 34%;
+	margin-bottom: 0;
+	margin-right: 0;
+	text-align: center;
+}
+
+.welcome-image {
+	display: flex;
+	justify-content: center;
+	width: auto;
+	height: 90%;
+	margin-left: 10%;
+}
+
+.welcome-card {
+	position: absolute;
+	max-width: 35em;
+	width: 28%;
+	height: 100vh;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	padding-top: 7%;
+	align-items: center;
+	box-shadow: 1px 0px 20px rgb(190, 190, 190);
+}
+
+h2 {
+	text-align: center;
+	margin-top: 20%;
+}
+
+h4 {
+	color: black;
+}
+
+h2 a {
+	color: #132e5f;
+	font: Roboto;
+	text-align: center;
+	size: 16px;
+}
+
+.container-image {
+	display: flex;
+	width: 100%;
+	height: 105px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.container-image img {
+	width: auto;
+	height: 100%;
+}
+
+.welcome-logo {
+	height: 105px;
+	width: 249px;
+}
+
+.tab-group {
+	margin-top: 30px;
+}
+
+.tab-label {
+	display: inline-block;
+	color: var(--hgi-green);
+	font-family: var(--hgi-font), serif;
+	font-size: large;
+	font-weight: 700;
+	inline-size: 50%;
+	overflow-wrap: break-word;
+	text-transform: none;
+}
+
+.tab-selected {
+	color: var(--hgi-blue);
+}
+
+.forgot-password-link {
+	margin-top: 0;
+	font-family: var(--hgi-font);
+	background-color: transparent;
+	border: 0;
+	height: 2em;
+	align-items: center;
+}
+
+.container-button {
+	display: flex;
+	justify-content: center;
+}
+
+.container-dialog {
+	padding: 10px;
+	max-width: 600px;
+	justify-content: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.button-help {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	box-sizing: border-box;
+	outline: 0px;
+	border: 0px;
+	margin: 0px;
+	cursor: pointer;
+	user-select: none;
+	vertical-align: middle;
+	appearance: none;
+	text-decoration: none;
+	font-weight: 500;
+	line-height: 1.75;
+	letter-spacing: 0.02857em;
+	text-transform: uppercase;
+	min-width: 64px;
+	padding: 6px 16px;
+	border-radius: 4px;
+	transition:
+		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+		border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+		color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	color: rgb(255, 255, 255);
+	background-color: rgb(34, 48, 93);
+	box-shadow: none;
+}
+
+.alter-tab {
+	display: flex;
+	justify-content: center;
+}
+
+div button {
+	margin-top: 0;
+	font-family: var(--hgi-font);
+	background-color: transparent;
+	border: 0;
+	height: 2em;
+	align-items: center;
+}
+
+@media (max-width: 1000px) {
+	.welcome-card {
+		position: absolute;
+		width: 50%;
+		height: 100vh;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		padding: 24px;
+		padding-top: 7%;
+		align-items: center;
+		box-shadow: 1px 0px 20px rgb(190, 190, 190);
+	}
+
+	.image-background {
+		width: 0;
+		height: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.welcome-page-container {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.welcome-card {
+		width: 100vw;
+		height: 100vh;
+		padding-top: 7%;
+	}
+
+	.welcome-card {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-image: url('../../../../assets/imgs/login-background.webp');
+		background-size: contain;
+	}
+
+	.welcome-page-background {
+		display: none;
+	}
+
+	.container-image {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 15%;
+	}
+
+	.title-form {
+		font-size: 24px;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	.background-phone {
+		width: 95vw;
+		height: 96vh;
+		padding: 4%;
+		border-radius: 20px;
+		background-color: white;
+	}
+}

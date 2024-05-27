@@ -1,0 +1,36 @@
+.organization-menu-root {
+	width: 20em;
+	display: none;
+	border-radius: 1em;
+	padding-block: 2em;
+	padding-inline: 2em;
+}
+
+.organization-menu-root > *:not(:last-child) {
+	margin-bottom: 2em;
+}
+
+@media all and (min-width: 70em) {
+	.organization-menu-root {
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+	}
+}
+
+.organization-menu-item {
+	display: inline-flex;
+	align-items: center;
+	font-weight: bold;
+	cursor: pointer;
+	color: var(--hgi-blue);
+	font-family: var(--hgi-font);
+}
+
+.organization-menu-item > *:not(:last-child) {
+	margin-right: 10%;
+}
+
+.item-clicked {
+	color: var(--hgi-green);
+}

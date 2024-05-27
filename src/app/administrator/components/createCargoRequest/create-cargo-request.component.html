@@ -1,0 +1,35 @@
+<div>
+	<h2 class="card-title">Solicitar transporte de carga</h2>
+
+	<div class="intrument-org-report-content">
+		<div class="container">
+			<form [formGroup]="requestForm" (ngSubmit)="onSubmit()" style="display: flex; flex-direction: column;" >
+				<label for="requestDate">Fecha de inicio:</label>
+				<input type="date" id="requestDate" name="requestDate" formControlName="requestDate" required />
+		
+				<label for="cargoOwnerId">Numero de indentificación del propietario de la carga:</label>
+				<input type="text" id="cargoOwnerId" name="cargoOwnerId" formControlName="cargoOwnerId" required />
+		
+				<label for="origin">Origen:</label>
+				<input type="text" id="origin" name="origin" formControlName="origin" required />
+		
+				<label for="destination">Destino:</label>
+				<input type="text" id="destination" name="destination" formControlName="destination" required />
+		
+				<label for="dimensions">Dimenciones de la carga:</label>
+				<input type="text" id="dimensions" name="dimensions" formControlName="dimensions" required />
+		
+				<label for="weight">Peso de la carga:</label>
+				<input type="text" id="weight" name="weight" formControlName="weight" required />
+		
+				<label for="insuredValue">Valor de la carga:</label>
+				<input type="text" id="insuredValue" name="insuredValue" formControlName="insuredValue" required />
+		
+				<label for="packaging">Tipo de envasado o contenedor:</label>
+				<input type="text" id="packaging" name="packaging" formControlName="packaging" required />
+		
+				<button type="submit">Crear solicitud</button>
+			</form>
+		</div>
+	</div>
+</div>

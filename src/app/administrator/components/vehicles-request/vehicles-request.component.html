@@ -1,0 +1,26 @@
+<article class="organization-report-root">
+	<div class="card-root">
+		<span>Seleccione un instrumento para ver el resumen de resultados:</span>
+
+		<select class="intrument-org-report-select hgio-select">
+			<option
+				*ngFor="let vehicle of vehicles"
+				class=".instrument-report-option"
+				[value]="vehicle.id"
+			>
+				{{ vehicle.model }}
+			</option>
+		</select>
+	</div>
+
+	<div class="card-root">
+		<app-create-cargo-request />
+	</div>
+
+	<div class="card-root">
+		<app-employee-list-card
+			[showFillOut]="true"
+			title="Envio de instrumento de INSTRUMENTO"
+		/>
+	</div>
+</article>
