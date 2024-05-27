@@ -1,15 +1,8 @@
-# Instruments Frontend
+# App-Camiones-Angular
 
 ## Developer guide
 
 ### Run application
-
-Requirements:
-
-- NodeJS version 20 or latest.
-- Instruments Web Services up and running.
-- (Optional) Angular CLI (`npm install -g @angular/cli`)
-
 Run Angular project:
 
 ```bash
@@ -47,4 +40,4 @@ Example of `.vscode/settings.json`:
   }
 }
 ```
-# App-Camiones-Angular
+
